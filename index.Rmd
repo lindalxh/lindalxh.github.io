@@ -1,12 +1,31 @@
 ---
-title: "My awesome website"
+title: "Xinhui (Linda) Lin"
 output: 
   html_document:
-    toc: true
     toc_float: true
-    theme: cerulean
+---
+<br>
+<div align="center">
+![](images/hello.JPG){width=500px height=500px}
+</div>
+<br>
+
+# About
+
+Hello! I'm Xinhui (Linda) Lin, a first-year Biostatistics MS student (Statistical Genetics track) at Columbia University's Mailman School of Publich Health.
+
+Explore more about my academic and professional experience [here](resume.html).
+
+<br><br>
+
+# Contact Information
+Xinhui (Linda) Lin
+
+✉️ [xl3054@cumc.columbia.edu](mailto:xl3054@cumc.columbia.edu)  
+
+🌐 [GitHub](https://github.com/lindalxh) | [LinkedIn](https://www.linkedin.com/in/xinhui-lin/)
+
 ---
 
-# This is Jeff's awesome website
+© 2025 Xinhui (Linda) Lin
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
