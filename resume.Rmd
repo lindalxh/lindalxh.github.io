@@ -1,0 +1,58 @@
+---
+title: "Xinhui (Linda) Lin"
+output: 
+  html_document:
+    toc_float: true
+---
+
+📍 New York, NY  
+✉️ [xl3054@cumc.columbia.edu](mailto:xl3054@cumc.columbia.edu)  
+🌐 [GitHub](https://github.com/lindalxh) | [LinkedIn](https://www.linkedin.com/in/xinhui-lin/)
+
+---
+ 
+## 🎓 Education
+
+**Mailman School of Public Health, Columbia University**  
+*MS in Biostatistics (Statistical Genetics Track)*  
+*Expected May 2027*  
+
+<br>
+
+**[Barnard College, Columbia University]**  
+*BA in Economics-Statistics* — *Graduated Feb 2024*  
+- Honors: Dean’s List (Fall 2020, Fall 2021, Spring 2023, Fall 2023)
+
+---
+
+## 💼 Professional Experience
+
+**Beth Israel Deaconess Medical Center** | *Bioinformatician*  | Boston, MA, and online  
+*July 2023 – Present*  
+- Processed and analyzed large-scale proteomic datasets, encompassing over 10,000 proteins across 500+ samples from diverse disease cohorts—including inflammatory bowel disease, post-operative cognitive decline in SAGES (Successful Aging after Elective Surgery study), and liver cancer—using R and Python  
+- Conducted differential expression analysis applying statistical methods with FDR correction to identify significant protein expression changes; generated volcano plots and profile plots to visualize expression patterns across timepoints  
+- Developed predictive models (logistic regression, Elastic Net, SVM) to identify potential biomarkers for disease classification and patient subtyping, supporting earlier diagnosis and supporting personalized treatment strategies  
+- Contributed to the writing of in-progress manuscripts for multiple projects focused on proteomic biomarker discovery  
+
+<br>
+
+**Dev. and Alumnae Relations Office, Barnard College** | *Office Assistant* | New York, NY  
+*Feb - Dec 2023*  
+- Assist Senior Vice President of DevAR with managing general email inbox and engaged in data entry in Salesforce  
+- Support DevAR team in organizing reunion events and connecting Barnard’s alumnae to each other and to the College  
+
+---
+
+## 🧮 SKILLS
+
+| Category | Skills |
+|-----------|--------|
+| **Programming** | R, Python, Git/GitHub, MySQL, Java |
+| **Tools** | Microsoft Excel, Microsoft Word, Microsoft PowerPoint |
+| **Languages** | Mandarin Chinese (native), Korean (conversational), Spanish (basic) |
+
+---
+
+[Back to home](index.html)
+
+© 2025 Xinhui (Linda) Lin

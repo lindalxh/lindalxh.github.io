@@ -1,0 +1,90 @@
+---
+title: "Instacart"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+[Back to home](index.html)
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### 1. Top 20 Most Frequently Ordered Products (Bar plot)
+```{r}
+instacart %>%
+  count(product_name, sort = TRUE) %>%
+  head(20) %>%
+  mutate(product_name = reorder(product_name, n)) %>% 
+  plot_ly(x = ~n, 
+          y = ~product_name, 
+          type = "bar",
+          hovertemplate = paste('<b>%{y}</b><br>',
+                                'Orders: %{x:,}<br>',
+                                '<extra></extra>')) %>%
+  layout(title = "Top 20 Most Frequently Ordered Products",
+         xaxis = list(title = "Number of Orders"),
+         yaxis = list(title = "Product name"))
+```
+
+Column {data-width=450}
+-----------------------------------------------------------------------
+
+### 2. Orders by hour for top 5 departments (Line plot)
+
+```{r}
+instacart %>%
+  add_count(department, name = "dept_total") %>%
+  filter(dense_rank(desc(dept_total)) <= 5) %>%
+  count(department, order_hour_of_day) %>% 
+  plot_ly(x = ~order_hour_of_day, 
+          y = ~n, 
+          color = ~department,
+          type = "scatter",
+          mode = "lines+markers",
+          hovertemplate = paste('<b>%{fullData.name}</b><br>',
+                                'Hour: %{x}<br>',
+                                'Orders: %{y:,}<br>',
+                                '<extra></extra>')) %>%
+  layout(title = "Orders by Hour for Top 5 Departments",
+         xaxis = list(title = "Hour of Day", dtick = 3),
+         yaxis = list(title = "Number of Orders"),
+         legend = list(title = list(text = "<b>Department</b>")))
+```
+
+### 3. Relationship between products and order volume by aisle (Scatterplot)
+
+```{r}
+instacart %>%
+  group_by(aisle, department) %>%
+  summarise(total_orders = n(),
+            unique_products = n_distinct(product_id),
+            .groups = "drop") %>%
+  plot_ly(x = ~unique_products, 
+          y = ~total_orders,
+          color = ~department,
+          type = "scatter",
+          mode = "markers",
+          marker = list(size = 8, opacity = 0.7),
+          text = ~aisle,
+          hovertemplate = paste('<b>%{text}</b><br>',
+                                'Department: %{fullData.name}<br>',
+                                'Unique Products: %{x}<br>',
+                                'Total Orders: %{y:,}<br>',
+                                '<extra></extra>')) %>%
+  layout(title = "Aisle Popularity vs Product Variety",
+         xaxis = list(title = "Number of Unique Products in Aisle"),
+         yaxis = list(title = "Total Orders"),
+         legend = list(title = list(text = "<b>Department</b>")))
+```
+
+
+
+
